@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spa-client": {
+    "web-app-spa": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/spa-client",
+            "outputPath": "dist/web-app-spa",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "spa-client:build:production"
+              "buildTarget": "web-app-spa:build:production"
             },
             "development": {
-              "buildTarget": "spa-client:build:development",
+              "buildTarget": "web-app-spa:build:development",
               "host": "127.0.0.1"
             }
           },
@@ -95,6 +95,17 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "web-app-spa:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "web-app-spa:serve:production"
+            }
           }
         }
       }
