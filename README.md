@@ -10,6 +10,13 @@ npm install
 npm run build
 npm run start
 ```
+## Run app on container
+
+- Build docker image with `docker build -t web-app-spa:1.0 .`
+- Verify docker image with `docker image ls web-app-spa`
+- Run container locally with `docker run -d --rm -p 9898:4200 --name web-app-spa-container web-app-spa:1.0` . Navigate to `http://127.0.0.1:9898/`
+- Interact with container `docker exec -i web-app-spa-container sh`
+
 
 
 ## Development server
