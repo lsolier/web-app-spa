@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
+## Logical Architecture 
+![logical-diagram](/public/logical-architecture.jpg)
+
 ## Run App Locally
 
 Run
